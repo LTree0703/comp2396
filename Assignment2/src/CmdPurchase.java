@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class CmdPurchase implements Command {
 
@@ -23,7 +24,7 @@ public class CmdPurchase implements Command {
 		}
 		else {
 			ArrayList<Integer> changeCoins = v.changeCoins(change);
-			changeCoins.sort(null);
+			changeCoins.sort(Comparator.naturalOrder());
 			result += " Your change: ";
 			for (int i = 0; i < changeCoins.size(); i++) {
 				result += "$" + changeCoins.get(i);

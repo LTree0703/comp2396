@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class VendingMachine {
 	// ArrayList of Integers represents inserted coins in Coin Slot
@@ -19,7 +20,7 @@ public class VendingMachine {
 	
 	public void insertCoin(Integer c) {
 		insertedCoins.add(c);
-		insertedCoins.sort(null);
+		insertedCoins.sort(Comparator.naturalOrder());
 	}
 
 	public ArrayList<Integer> rejectCoins() {
